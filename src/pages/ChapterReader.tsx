@@ -49,22 +49,38 @@ const ChapterReader = () => {
         fetchData();
     }, [slug, id]);
 
-    // Auto-hide controls
+    // Toggle controls on click or scroll to bottom
     useEffect(() => {
-        const handleMouseMove = () => {
-            setShowControls(true);
-            if (controlsTimeout.current) clearTimeout(controlsTimeout.current);
-            controlsTimeout.current = setTimeout(() => {
-                setShowControls(false);
-            }, 3000);
+        const handleScroll = () => {
+            // Show controls if near bottom
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                setShowControls(true);
+            }
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        window.addEventListener('click', handleMouseMove);
+        const handleClick = (e: MouseEvent) => {
+            // Don't toggle if clicking a button/link inside the bars
+            if ((e.target as HTMLElement).closest('button') || (e.target as HTMLElement).closest('a')) {
+                return;
+            }
+            setShowControls(prev => !prev);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('click', handleClick);
+
+        // Initial clean state - hide after a moment if they don't do anything? 
+        // Or just start hidden/visible? Let's start transparently 
+        // but maybe show them briefly on load so user knows they exist?
+        // For now, let's respect "hidden and visible only if..." literally or keep current state
+        // User said "ensure that when I am reading or still the top and bottom bars on chapters are hidden"
+        // So default to false or hide quickly.
+        const timer = setTimeout(() => setShowControls(false), 2000);
+
         return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('click', handleMouseMove);
-            if (controlsTimeout.current) clearTimeout(controlsTimeout.current);
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('click', handleClick);
+            clearTimeout(timer);
         };
     }, []);
 
