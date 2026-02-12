@@ -9,8 +9,10 @@
     "clean": "farm clean"
   },
   "dependencies": {
+    "lucide-react": "^0.563.0",
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@farmfe/cli": "^1.0.4",
