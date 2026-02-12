@@ -16,8 +16,8 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
                         <Route path="/novel/:slug" element={<NovelDetail />} />
-                        <Route path="/novel/:slug/chapter/:id" element={<ChapterReader />} />
                     </Route>
+                    <Route path="/novel/:slug/chapter/:id" element={<ChapterReader />} />
                 </Routes>
             </Router>
         </ThemeProvider>

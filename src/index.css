@@ -1,7 +1,9 @@
 :root {
-  --bg-color: #fafaeb; /* Warm paper-like background */
+  --bg-color: #fafaeb;
+  /* Warm paper-like background */
   --text-color: #2c2c2c;
-  --accent-color: #d35400; /* Subtle orange accent */
+  --accent-color: #d35400;
+  /* Subtle orange accent */
   --secondary-text: #666;
   --card-bg: #fff;
   --border-color: #e0e0e0;
@@ -49,15 +51,25 @@ a:hover {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-serif);
   font-weight: 700;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
 
 /* Novel Grid */
 .novel-grid {
@@ -71,7 +83,7 @@ h3 { font-size: 1.5rem; }
   background: var(--card-bg);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
@@ -79,7 +91,7 @@ h3 { font-size: 1.5rem; }
 
 .novel-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .novel-cover {
@@ -134,14 +146,14 @@ h3 { font-size: 1.5rem; }
   width: 250px;
   aspect-ratio: 2/3;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: rgba(255,255,255,0.8);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 20px;
 }
@@ -152,7 +164,7 @@ h3 { font-size: 1.5rem; }
 
 .genre-tag {
   display: inline-block;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 4px 12px;
   border-radius: 16px;
   font-size: 0.85rem;
@@ -180,7 +192,7 @@ h3 { font-size: 1.5rem; }
 
 .chapter-item:hover {
   border-color: var(--accent-color);
-  background-color: rgba(0,0,0,0.02);
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 /* Reader */
@@ -261,3 +273,219 @@ h3 { font-size: 1.5rem; }
   border-top: 1px solid var(--border-color);
   margin-top: 60px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .novel-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .novel-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .novel-header-cover {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .reader-container {
+    padding: 20px 16px;
+  }
+
+  .reader-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+}
+
+/* Immersive Mode */
+.immersive-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.immersive-toggle:hover {
+  transform: scale(1.1);
+}
+
+.reader-container.immersive {
+  max-width: 900px;
+  padding-top: 60px;
+}
+
+
+/* Isolated Reader Styles */
+.isolated-reader {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.reader-top-bar,
+.reader-bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .reader-top-bar,
+[data-theme='dark'] .reader-bottom-bar {
+  background: rgba(30, 30, 30, 0.95);
+  border-color: #333;
+}
+
+.reader-top-bar {
+  top: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.reader-bottom-bar {
+  bottom: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: none;
+}
+
+.reader-top-bar.visible,
+.reader-bottom-bar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reader-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px 100px;
+  /* Space for bars */
+}
+
+.chapter-title-main {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-serif);
+}
+
+.reader-text {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: var(--text-color);
+}
+
+.reader-text p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: inherit;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn-floating {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.nav-btn-floating:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent-color);
+}
+
+.nav-btn-floating:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.chapter-title-micro {
+  font-weight: 600;
+  margin-left: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.bar-left,
+.bar-right {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .reader-text {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .chapter-title-micro {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Hide header/layout elements when immersive if needed via JS or additional classes on body, 
+   but here we just focus on reader container changes */
