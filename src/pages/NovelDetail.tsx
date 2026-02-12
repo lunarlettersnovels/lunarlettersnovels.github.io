@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { api, Series, Chapter } from '../services/api';
+import { usePageTitle } from '../hooks/usePageTitle';
+import { isChapterRead } from '../services/progress';
+import { CheckCircle } from 'lucide-react';
 
 const NovelDetail = () => {
     const { slug } = useParams<{ slug: string }>();
     const [series, setSeries] = useState<Series | null>(null);
     const [chapters, setChapters] = useState<Chapter[]>([]);
+    const [readChapters, setReadChapters] = useState<number[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
+    usePageTitle(series ? series.title : 'Loading...');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,6 +25,13 @@ const NovelDetail = () => {
                 ]);
                 setSeries(seriesData);
                 setChapters(chaptersData);
+
+                // Check read status
+                const readIds = chaptersData
+                    .filter(c => isChapterRead(seriesData.id, c.id))
+                    .map(c => c.id);
+                setReadChapters(readIds);
+
             } catch (err) {
                 setError('Failed to load novel details.');
                 console.error(err);
@@ -55,7 +68,7 @@ const NovelDetail = () => {
 
                     {series.genre && (
                         <div className="genres">
-                            {series.genre.split(',').map((g, i) => (
+                            {series.genre.split(',').map((g: string, i: number) => (
                                 <span key={i} className="genre-tag">{g.trim()}</span>
                             ))}
                         </div>
@@ -63,7 +76,10 @@ const NovelDetail = () => {
 
                     <div style={{ marginTop: '20px' }}>
                         <h3>Synopsis</h3>
-                        <p style={{ lineHeight: '1.8', maxWidth: '800px' }}>{series.description || 'No description available.'}</p>
+                        <div
+                            style={{ lineHeight: '1.8', maxWidth: '800px' }}
+                            dangerouslySetInnerHTML={{ __html: series.description || 'No description available.' }}
+                        />
                     </div>
                 </div>
             </div>
@@ -73,15 +89,22 @@ const NovelDetail = () => {
             </div>
 
             <div className="chapter-list">
-                {chapters.map((chapter) => (
-                    <Link
-                        key={chapter.id}
-                        to={`/novel/${series.slug}/chapter/${chapter.id}`}
-                        className="chapter-item"
-                    >
-                        Ch. {chapter.chapter_number}
-                    </Link>
-                ))}
+                {chapters.map((chapter) => {
+                    const isRead = readChapters.includes(chapter.id);
+                    return (
+                        <Link
+                            key={chapter.id}
+                            to={`/novel/${series.slug}/chapter/${chapter.id}`}
+                            className="chapter-item"
+                            style={isRead ? { borderColor: 'var(--accent-color)', opacity: 0.8 } : {}}
+                        >
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
+                                {isRead && <CheckCircle size={14} color="green" />}
+                                <span>Ch. {chapter.chapter_number}</span>
+                            </div>
+                        </Link>
+                    );
+                })}
             </div>
         </div>
     );

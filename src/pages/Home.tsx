@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { api, Series } from '../services/api';
 import NovelCard from '../components/NovelCard';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const Home = () => {
+    usePageTitle('Home');
     const [series, setSeries] = useState<Series[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
