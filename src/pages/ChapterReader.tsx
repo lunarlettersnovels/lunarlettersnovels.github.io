@@ -114,13 +114,19 @@ const ChapterReader = () => {
                 <h1 className="chapter-title-main">{chapter.title || `Chapter ${chapter.chapter_number}`}</h1>
 
                 <div className="reader-text">
-                    {chapter.content && (chapter.content.includes('<p>') || chapter.content.includes('<div>')) ? (
-                        <div dangerouslySetInnerHTML={{ __html: chapter.content }} />
-                    ) : (
-                        chapter.content?.split('\n').map((para, i) => (
-                            <p key={i}>{para}</p>
-                        ))
-                    )}
+                    {(() => {
+                        const content = chapter.content || '';
+                        // Strip images
+                        const strippedContent = content.replace(/<img[^>]*>/g, '');
+
+                        if (strippedContent.includes('<p>') || strippedContent.includes('<div>')) {
+                            return <div dangerouslySetInnerHTML={{ __html: strippedContent }} />;
+                        } else {
+                            return strippedContent.split('\n').map((para, i) => (
+                                <p key={i}>{para}</p>
+                            ));
+                        }
+                    })()}
                 </div>
             </div>
 
