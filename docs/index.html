@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Library - Lunar Letters</title>
+    <meta name="description" content="Read novels online at Lunar Letters">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/main.js" defer></script>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="app-shell">
+        
+        <header class="app-header" id="app-header">
+            <div class="app-header-inner">
+                <a href="/" class="app-logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                            fill="currentColor" />
+                    </svg>
+                    <span>Lunar Letters</span>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="/library" class="nav-link">Library</a>
+                </nav>
+                <div class="app-header-actions">
+                    <button id="theme-toggle" class="app-icon-btn" aria-label="Toggle theme">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l56-56 113 113-55 54Zm-94 292v-80h160v80H160Zm114 268 54-55 115 112-57 57-112-114ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z" />
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        
+        <main class="app-content">
+            
+<div class="library-page">
+    
+    <div class="library-header">
+        <h1 class="library-title">Library</h1>
+        <span class="library-count">46 novels</span>
+    </div>
+
+    
+    <div class="filter-pills" id="filter-pills">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="ongoing">Ongoing</button>
+        <button class="pill" data-filter="completed">Completed</button>
+    </div>
+
+    
+    <div class="novel-list" id="novel-list">
+        
+        <a href="/novel/a-cruel-beasts-leash" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/a-cruel-beasts-leash.jpeg" alt="A Cruel Beast’s Leash" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">A Cruel Beast’s Leash</div>
+                <div class="novel-row-author">Tripple Berry</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/a-noble-marriage" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/10/A-Noble-Marriage.jpg" alt="A Noble Marriage" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">A Noble Marriage</div>
+                <div class="novel-row-author">Mizuki Long</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/aphrodites-choice" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/02/Aphrodites-Choice.jpg" alt="Aphrodite’s Choice" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Aphrodite’s Choice</div>
+                <div class="novel-row-author">Jinshisa</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/apollos-heart" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/04/apollos.jpg" alt="Apollo’s Heart" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Apollo’s Heart</div>
+                <div class="novel-row-author">Lee Bo-na</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/climax" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/climax.jpg" alt="Climax" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Climax</div>
+                <div class="novel-row-author">Joo-hyun</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/deviant-1995" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/deviant-1995.png" alt="Deviant 1995" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Deviant 1995</div>
+                <div class="novel-row-author">Eebunhong</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance, Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/devoured-by-an-impure-savior" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2025/01/Devoured-by-an-Impure-Savior.png" alt="Devoured by an Impure Savior" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Devoured by an Impure Savior</div>
+                <div class="novel-row-author">Barley Sikhye</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/my-vengeful-former-lover" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/My-Vengeful-Former-Lover.jpg" alt="Don’t Hold on to the Broken Branch" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Don’t Hold on to the Broken Branch</div>
+                <div class="novel-row-author">Zocopia</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/favored-by-the-villain-tl" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2025/08/Favored-By-The-Villain.jpg" alt="Favored By The Villain" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Favored By The Villain</div>
+                <div class="novel-row-author">Tabby Star</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/flowers-are-bait" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/flowers-are-bait.jpg" alt="Flowers Are Bait" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Flowers Are Bait</div>
+                <div class="novel-row-author">Dried Ladies</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/for-a-princess" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg" alt="For A Princess" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">For A Princess</div>
+                <div class="novel-row-author">Sasogeum Jo</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/for-persephone" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/02/For-Persephone.jpg" alt="For Persephone" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">For Persephone</div>
+                <div class="novel-row-author">Three-legged Island</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/grievance-of-the-young-bride" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/youndbride.jpg" alt="Grievance of the Young Bride" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Grievance of the Young Bride</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/heavenly-divine-doctor-abandoned-concubine" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/12/HeavenlyDivineDoctor2.jpg" alt="Heavenly Divine Doctor: Abandoned Concubine" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Heavenly Divine Doctor: Abandoned Concubine</div>
+                <div class="novel-row-author">Yu Fang</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/i-am-dead" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2024/05/I-Am-Dead.png" alt="I Am Dead" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">I Am Dead</div>
+                <div class="novel-row-author">Absolute Genius</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/impossible-lovers" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/impossible-lovers.jpg" alt="Impossible Lovers" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Impossible Lovers</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/kick-back" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/kick-back.webp" alt="Kick Back" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Kick Back</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Unknown</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/lay-your-eyes-on-jasmine" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/04/Please-Lay-Your-Eyes-on-Jasmine.jpg" alt="Lay Your Eyes on Jasmine" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Lay Your Eyes on Jasmine</div>
+                <div class="novel-row-author">Chestnut</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance, Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/living-as-the-villains-stepmother" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/03/Living-as-the-Villains-Stepmother.jpeg" alt="Living as the Villain’s Stepmother" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Living as the Villain’s Stepmother</div>
+                <div class="novel-row-author">Yeon Hui</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/marriage-contract-with-two-husbands" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2024/08/Marriage-Contract-with-Two-Husbands.jpg" alt="Marriage Contract with Two Husbands" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Marriage Contract with Two Husbands</div>
+                <div class="novel-row-author">Geum Eunha</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/mery-psycho" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/merry-psycho.jpg" alt="Merry Psycho" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Merry Psycho</div>
+                <div class="novel-row-author">Dried Ladies</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/mirror-mirror" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/mirror-mirror.webp" alt="Mirror, Mirror" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Mirror, Mirror</div>
+                <div class="novel-row-author">Jeong-eon</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance, Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/my-second-life-as-a-secretary" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/07/My-Second-Life-As-A-Secretary.png" alt="My Second Life As A Secretary" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">My Second Life As A Secretary</div>
+                <div class="novel-row-author">Mai Hua Er Guniang</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/my-villain-husband-tl" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/05/My-Villain-Husband.jpg" alt="My Villain Husband" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">My Villain Husband</div>
+                <div class="novel-row-author">Jin Hee-hwa</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/one-hundred-years-in-a-day" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/09/One-Hundred-Years-As-An-Extra.jpeg" alt="One Hundred Years As An Extra" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">One Hundred Years As An Extra</div>
+                <div class="novel-row-author">Hypnotize Me</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/operation-catharsis" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/12/Operation-Catharsis.jpg" alt="Operation Catharsis" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Operation Catharsis</div>
+                <div class="novel-row-author">MontBlanc</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/princess-sherrys-tale" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/02/Princess-Sherrys-Tale.jpg" alt="Princess Sherry’s Tale" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Princess Sherry’s Tale</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Unknown</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/raising-the-child-of-the-male-lead-boss" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/08/Transmigration-Raising-the-Child-of-the-Male-Lead-Boss.jpg" alt="Raising the Child of the Male Lead Boss" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Raising the Child of the Male Lead Boss</div>
+                <div class="novel-row-author">Salted Lobster</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/savage-paradise" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2024/05/Savage-Paradise.jpg" alt="Savage Paradise" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Savage Paradise</div>
+                <div class="novel-row-author">Tara</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/saving-the-prince-regent" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/12/savingregent7.jpg" alt="Saving the Prince Regent" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Saving the Prince Regent</div>
+                <div class="novel-row-author">Flower Heart</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/seomgyeong-thug" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/seomgyeong.png" alt="Seomgyeong Thug" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Seomgyeong Thug</div>
+                <div class="novel-row-author">Yublu</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/sheeps-hill" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/sheeps-hill.jpg" alt="Sheep’s Hill" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Sheep’s Hill</div>
+                <div class="novel-row-author">Moon Seolyoung</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance, Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/superstar-no-big-deal" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/11/SNBD-4.jpg" alt="Superstar, No Big Deal?!" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Superstar, No Big Deal?!</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/taming-the-dark-lord" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/11/taming-darklord2.jpg" alt="Taming the Dark Lord" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Taming the Dark Lord</div>
+                <div class="novel-row-author">Hegeng Tiantian</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-day-i-escaped-from-the-beasts-cage" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2023/07/The-Day-I-Escaped-from-Beast-Cage.jpeg" alt="The Day I Escaped from the Beast’s Cage" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Day I Escaped from the Beast’s Cage</div>
+                <div class="novel-row-author">MONT</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-demon-king-wants-peace" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/the-demon-king-wants-peace.webp" alt="The Demon King Wants Peace" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Demon King Wants Peace</div>
+                <div class="novel-row-author">Leuleub</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-duchesss-dangerous-love-life" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/12/4F7E5C6B-B762-435D-BDA0-99D2DF675BC5.jpeg" alt="The Duchess’s Dangerous Love Life" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Duchess’s Dangerous Love Life</div>
+                <div class="novel-row-author">Yuyon</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance, Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-empress-returns" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/02/The-Empress-Returns.jpeg" alt="The Empress Returns" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Empress Returns</div>
+                <div class="novel-row-author">Riki</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/forest-where-the-wolf-sleeps" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2021/08/The-Forest-Where-the-Wolf-Sleeps.jpeg" alt="The Forest Where the Wolf Sleeps" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Forest Where the Wolf Sleeps</div>
+                <div class="novel-row-author">Diego</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-night-wanderer" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2024/07/The-Night-Wanderer.jpg" alt="The Night Wanderer" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Night Wanderer</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-royal-dealtl" class="novel-row"
+            data-status="completed">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/08/takecareofmyself3.jpg" alt="The Royal Deal" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Royal Deal</div>
+                <div class="novel-row-author">Seharum</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-completed">completed</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-tang-dynastys-female-forensic-doctor" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/12/HeavenlyDivineDoctor2.jpg" alt="The Tang Dynasty’s Female Forensic Doctor" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">The Tang Dynasty’s Female Forensic Doctor</div>
+                <div class="novel-row-author">Unknown</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/tyrants-trap" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2022/09/Tyrants-Trap.jpg" alt="Tyrant’s Trap" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Tyrant’s Trap</div>
+                <div class="novel-row-author">Naknak</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance, Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/when-spring-comes" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2020/11/whenspringcomes2.jpg" alt="When Spring Comes" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">When Spring Comes</div>
+                <div class="novel-row-author">Little Egrets In Pairs</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Historical Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/the-mad-emperor-suddenly-becomes-sweet" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://cdn.novelupdates.com/images/2025/11/When-the-Mad-Emperor-Suddenly-Becomes-Sweet.jpg" alt="When the Mad Emperor Suddenly Becomes Sweet" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">When the Mad Emperor Suddenly Becomes Sweet</div>
+                <div class="novel-row-author">Jezz</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Fantasy Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+        <a href="/novel/whos-the-real-trash" class="novel-row"
+            data-status="publishing">
+            
+            <div class="novel-row-cover">
+                <img src="https://assets.lunarletters.fun/thumbnails/whos-the-real-trash.png" alt="Who’s the Real Trash?" class="novel-row-img" loading="lazy">
+            </div>
+            
+            <div class="novel-row-info">
+                <div class="novel-row-title">Who’s the Real Trash?</div>
+                <div class="novel-row-author">Jeong Eundong</div>
+                <div class="novel-row-meta">
+                    
+                    <span class="novel-row-genre">Modern Romance</span>
+                    
+                    
+                    <span class="novel-row-status status-publishing">publishing</span>
+                    
+                </div>
+            </div>
+            <div class="novel-row-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                    fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+        </main>
+
+        
+        <nav class="bottom-bar">
+            <a href="/" class="tab-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="/library" class="tab-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                </svg>
+                <span>Library</span>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

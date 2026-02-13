@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Sheep’s Hill - Lunar Letters</title>
+    <meta name="description" content="Read novels online at Lunar Letters">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/main.js" defer></script>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="app-shell">
+        
+        <header class="app-header" id="app-header">
+            <div class="app-header-inner">
+                <a href="/" class="app-logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                            fill="currentColor" />
+                    </svg>
+                    <span>Lunar Letters</span>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="/library" class="nav-link">Library</a>
+                </nav>
+                <div class="app-header-actions">
+                    <button id="theme-toggle" class="app-icon-btn" aria-label="Toggle theme">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l56-56 113 113-55 54Zm-94 292v-80h160v80H160Zm114 268 54-55 115 112-57 57-112-114ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z" />
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        
+        <main class="app-content">
+            
+
+
+<div class="series-banner" style="background-image: url('https://assets.lunarletters.fun/thumbnails/sheeps-hill.jpg')">
+    <div class="series-banner-overlay"></div>
+    <div class="series-banner-content"></div>
+</div>
+
+
+
+<div class="series-info-card">
+    <h1 class="series-title">Sheep’s Hill</h1>
+    <p class="series-author">
+        Moon Seolyoung
+    </p>
+
+    
+    <div class="series-tags">
+        
+        <span class="tag">Historical Romance</span>
+        
+        <span class="tag"> Modern Romance</span>
+        
+    </div>
+    
+
+    <div class="series-stats">
+        <div class="stat">
+            <span class="stat-value">31</span>
+            <span class="stat-label">Chapters</span>
+        </div>
+        
+        <div class="stat">
+            <span class="stat-value status-dot status-publishing">publishing</span>
+            <span class="stat-label">Status</span>
+        </div>
+        
+        
+        <div class="stat">
+            <span class="stat-value">2025</span>
+            <span class="stat-label">Year</span>
+        </div>
+        
+    </div>
+
+    
+    <div class="series-actions">
+        <a href="#chapters" class="cta-btn" id="start-reading-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
+                <path
+                    d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z" />
+            </svg>
+            Start Reading
+        </a>
+        <button id="bookmark-btn" class="cta-btn secondary" data-slug="sheeps-hill" data-title="Sheep’s Hill"
+            data-author="Moon Seolyoung"
+            data-cover="https://assets.lunarletters.fun/thumbnails/sheeps-hill.jpg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
+                <path
+                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<div class="series-tabs">
+    <button class="series-tab active" data-tab="about">About</button>
+    <button class="series-tab" data-tab="chapters">Chapters</button>
+</div>
+
+
+<div class="tab-panel active" id="panel-about">
+    <div class="synopsis-section">
+        <h3 class="section-label">Synopsis</h3>
+        <div class="synopsis-text">
+            
+            <p>※ This work is set in the 1980s. All institutions, professions, regions, events, and characters depicted are entirely fictional.</p>
+<p> </p>
+<p>No. 1 on the music charts more times than anyone else.<br>
+A record-breaking 14 weeks at the top.<br>
+The most admired woman.<br>
+The sexiest female singer.</p>
+<p>She was Geummi, the dance-pop queen who swept every title imaginable.<br>
+But one day, after losing consciousness, she wakes up in the body of inmate No. 89-7059, Ham Yeohee, inside Cheongjin Women’s Prison.</p>
+<p>I have to get back to my real body!</p>
+<p>But with no money, no connections, and no power, Ham Yeohee is dismissed as a lunatic.<br>
+Just as she struggles to find a way out, luck arrives in the form of Officer Ki.</p>
+<p>“I want to see yours, Officer Ki.”<br>
+“……”<br>
+“Would it be wrong if I said I liked you?”<br>
+“If you’re sure you won’t regret it, then go ahead.”</p>
+<p>The plan worked. The stone-faced man was finally reacting.</p>
+<p>“I’ll use you up and toss you aside when I’m done, you know.”</p>
+<p>But then—<br>
+</p>
+<p>“If you get pregnant, I’ll take responsibility.”<br>
+</p>
+<p>Instead of letting her go, the man reveals an overwhelming obsession for her.</p>
+<p> </p>
+<p>—</p>
+<p>“You said you’d only show me, but you spread yourself for anyone.”</p>
+<p>The long, rounded tip of his baton pressed between my legs.</p>
+<p>“If you keep leaking everywhere like that…”<br>
+“…ahh…”</p>
+<p>He nudged the baton against the sensitive spot again and again, then ground it firmly into me.</p>
+<p>“What do you expect me to do?”</p>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="tab-panel" id="panel-chapters">
+    <div class="chapters-section" id="chapters" data-series-id="45">
+        <div class="chapters-header">
+            <span class="chapters-count">31 chapters</span>
+        </div>
+        <div class="chapters-list">
+            
+            
+            
+            <a href="/novel/sheeps-hill/chapter/5530.html" class="ch-row" data-id="5530"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#0</span>
+                    <span class="ch-title">Chapter 0 - Prologue</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5529.html" class="ch-row" data-id="5529"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#1.1</span>
+                    <span class="ch-title">Chapter 1.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5528.html" class="ch-row" data-id="5528"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#1.2</span>
+                    <span class="ch-title">Chapter 1.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5527.html" class="ch-row" data-id="5527"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#2.1</span>
+                    <span class="ch-title">Chapter 2.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5526.html" class="ch-row" data-id="5526"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#2.2</span>
+                    <span class="ch-title">Chapter 2.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5525.html" class="ch-row" data-id="5525"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#3.1</span>
+                    <span class="ch-title">Chapter 3.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5524.html" class="ch-row" data-id="5524"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#3.2</span>
+                    <span class="ch-title">Chapter 3.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5523.html" class="ch-row" data-id="5523"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#4.1</span>
+                    <span class="ch-title">Chapter 4.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5522.html" class="ch-row" data-id="5522"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#4.2</span>
+                    <span class="ch-title">Chapter 4.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5521.html" class="ch-row" data-id="5521"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#5.1</span>
+                    <span class="ch-title">Chapter 5.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5520.html" class="ch-row" data-id="5520"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#5.2</span>
+                    <span class="ch-title">Chapter 5.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5519.html" class="ch-row" data-id="5519"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#6.1</span>
+                    <span class="ch-title">Chapter 6.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5518.html" class="ch-row" data-id="5518"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#6.2</span>
+                    <span class="ch-title">Chapter 6.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5517.html" class="ch-row" data-id="5517"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#7.1</span>
+                    <span class="ch-title">Chapter 7.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5516.html" class="ch-row" data-id="5516"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#7.2</span>
+                    <span class="ch-title">Chapter 7.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5515.html" class="ch-row" data-id="5515"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#8.1</span>
+                    <span class="ch-title">Chapter 8.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5514.html" class="ch-row" data-id="5514"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#8.2</span>
+                    <span class="ch-title">Chapter 8.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5513.html" class="ch-row" data-id="5513"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#9.1</span>
+                    <span class="ch-title">Chapter 9.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5512.html" class="ch-row" data-id="5512"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#9.2</span>
+                    <span class="ch-title">Chapter 9.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5511.html" class="ch-row" data-id="5511"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#10.1</span>
+                    <span class="ch-title">Chapter 10.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5510.html" class="ch-row" data-id="5510"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#10.2</span>
+                    <span class="ch-title">Chapter 10.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5509.html" class="ch-row" data-id="5509"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#11.1</span>
+                    <span class="ch-title">Chapter 11.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5508.html" class="ch-row" data-id="5508"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#11.2</span>
+                    <span class="ch-title">Chapter 11.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5507.html" class="ch-row" data-id="5507"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#12.1</span>
+                    <span class="ch-title">Chapter 12.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5506.html" class="ch-row" data-id="5506"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#12.2</span>
+                    <span class="ch-title">Chapter 12.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5505.html" class="ch-row" data-id="5505"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#13.1</span>
+                    <span class="ch-title">Chapter 13.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5504.html" class="ch-row" data-id="5504"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#13.2</span>
+                    <span class="ch-title">Chapter 13.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5503.html" class="ch-row" data-id="5503"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#14.1</span>
+                    <span class="ch-title">Chapter 14.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5502.html" class="ch-row" data-id="5502"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#14.2</span>
+                    <span class="ch-title">Chapter 14.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5501.html" class="ch-row" data-id="5501"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#15.1</span>
+                    <span class="ch-title">Chapter 15.1</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/sheeps-hill/chapter/5500.html" class="ch-row" data-id="5500"
+                data-series="45">
+                <div class="ch-row-left">
+                    <span class="ch-num">#15.2</span>
+                    <span class="ch-title">Chapter 15.2</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+
+        
+        const chaptersSection = document.getElementById('chapters');
+        if (!chaptersSection) return;
+        const seriesId = parseInt(chaptersSection.getAttribute('data-series-id'));
+        const progress = JSON.parse(localStorage.getItem('reading_progress') || '{}');
+        const readChapters = progress[seriesId] || [];
+
+        document.querySelectorAll('.ch-row').forEach(item => {
+            const chapterId = parseInt(item.getAttribute('data-id'));
+            if (readChapters.includes(chapterId)) {
+                item.classList.add('read');
+            }
+        });
+
+        
+        if (readChapters.length > 0) {
+            const btn = document.getElementById('start-reading-btn');
+            if (btn) {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z"/></svg> Continue Reading';
+            }
+        }
+    });
+</script>
+
+        </main>
+
+        
+        <nav class="bottom-bar">
+            <a href="/" class="tab-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="/library" class="tab-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                </svg>
+                <span>Library</span>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

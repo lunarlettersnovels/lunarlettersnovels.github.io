@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>For Persephone - Lunar Letters</title>
+    <meta name="description" content="Read novels online at Lunar Letters">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/main.js" defer></script>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="app-shell">
+        
+        <header class="app-header" id="app-header">
+            <div class="app-header-inner">
+                <a href="/" class="app-logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                            fill="currentColor" />
+                    </svg>
+                    <span>Lunar Letters</span>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="/library" class="nav-link">Library</a>
+                </nav>
+                <div class="app-header-actions">
+                    <button id="theme-toggle" class="app-icon-btn" aria-label="Toggle theme">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l56-56 113 113-55 54Zm-94 292v-80h160v80H160Zm114 268 54-55 115 112-57 57-112-114ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z" />
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        
+        <main class="app-content">
+            
+
+
+<div class="series-banner" style="background-image: url('https://cdn.novelupdates.com/images/2021/02/For-Persephone.jpg')">
+    <div class="series-banner-overlay"></div>
+    <div class="series-banner-content"></div>
+</div>
+
+
+
+<div class="series-info-card">
+    <h1 class="series-title">For Persephone</h1>
+    <p class="series-author">
+        Three-legged Island
+    </p>
+
+    
+    <div class="series-tags">
+        
+        <span class="tag">Fantasy Romance</span>
+        
+    </div>
+    
+
+    <div class="series-stats">
+        <div class="stat">
+            <span class="stat-value">58</span>
+            <span class="stat-label">Chapters</span>
+        </div>
+        
+        <div class="stat">
+            <span class="stat-value status-dot status-completed">completed</span>
+            <span class="stat-label">Status</span>
+        </div>
+        
+        
+        <div class="stat">
+            <span class="stat-value">2025</span>
+            <span class="stat-label">Year</span>
+        </div>
+        
+    </div>
+
+    
+    <div class="series-actions">
+        <a href="#chapters" class="cta-btn" id="start-reading-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
+                <path
+                    d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z" />
+            </svg>
+            Start Reading
+        </a>
+        <button id="bookmark-btn" class="cta-btn secondary" data-slug="for-persephone" data-title="For Persephone"
+            data-author="Three-legged Island"
+            data-cover="https://cdn.novelupdates.com/images/2021/02/For-Persephone.jpg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
+                <path
+                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<div class="series-tabs">
+    <button class="series-tab active" data-tab="about">About</button>
+    <button class="series-tab" data-tab="chapters">Chapters</button>
+</div>
+
+
+<div class="tab-panel active" id="panel-about">
+    <div class="synopsis-section">
+        <h3 class="section-label">Synopsis</h3>
+        <div class="synopsis-text">
+            
+            <p>“Demeter hid you away so well… I had a lot of trouble finding you.”</p>
+<p>Persephone’s cloak was peeled off by the man’s sinewy hand. Her shoulders shriveled due to the chills. The tightness in her chest was overwhelming, and the hem of the chiton rolled up to the stomach in no time. Persephone could only perceive his voice.</p>
+<p>“Persephone.”</p>
+<p>Persephone, the man called her name. His tongue and warm breath were licking the nape of her neck while he uttered the syllables of her name.</p>
+<p>“Why are you acting like a scared sheep? Didn’t you say you were not afraid?”</p>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="tab-panel" id="panel-chapters">
+    <div class="chapters-section" id="chapters" data-series-id="11">
+        <div class="chapters-header">
+            <span class="chapters-count">58 chapters</span>
+        </div>
+        <div class="chapters-list">
+            
+            
+            
+            <a href="/novel/for-persephone/chapter/2086.html" class="ch-row" data-id="2086"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#1</span>
+                    <span class="ch-title">Chapter 1 - He Has Found Me</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2085.html" class="ch-row" data-id="2085"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#2</span>
+                    <span class="ch-title">Chapter 2 - Demeter’s Daughter | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2084.html" class="ch-row" data-id="2084"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#3</span>
+                    <span class="ch-title">Chapter 3 - A Dead Man’s World (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2083.html" class="ch-row" data-id="2083"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#4</span>
+                    <span class="ch-title">Chapter 4 - A Dead Man’s World (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2082.html" class="ch-row" data-id="2082"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#5</span>
+                    <span class="ch-title">Chapter 5 - The Persistent Girl</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2081.html" class="ch-row" data-id="2081"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#6</span>
+                    <span class="ch-title">Chapter 6 - The Start of a Problem (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2080.html" class="ch-row" data-id="2080"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#7</span>
+                    <span class="ch-title">Chapter 7 - The Start of a Problem (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2079.html" class="ch-row" data-id="2079"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#8</span>
+                    <span class="ch-title">Chapter 8 - Her Desire to Be Invisible</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2078.html" class="ch-row" data-id="2078"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#9</span>
+                    <span class="ch-title">Chapter 9 - Call Me Kore</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2077.html" class="ch-row" data-id="2077"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#10</span>
+                    <span class="ch-title">Chapter 10 - A Drop of Poison</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2076.html" class="ch-row" data-id="2076"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#11</span>
+                    <span class="ch-title">Chapter 11 - His Desire To Covet</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2075.html" class="ch-row" data-id="2075"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#12</span>
+                    <span class="ch-title">Chapter 12 - A Kiss from Him (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2074.html" class="ch-row" data-id="2074"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#13</span>
+                    <span class="ch-title">Chapter 13 - A Kiss from Him (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2073.html" class="ch-row" data-id="2073"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#14</span>
+                    <span class="ch-title">Chapter 14 - Hermes the Warrior</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2072.html" class="ch-row" data-id="2072"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#15</span>
+                    <span class="ch-title">Chapter 15 - The Absence of Death</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2071.html" class="ch-row" data-id="2071"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#16</span>
+                    <span class="ch-title">Chapter 16 - Slave of Desire</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2070.html" class="ch-row" data-id="2070"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#17</span>
+                    <span class="ch-title">Chapter 17 - Another Woman (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2069.html" class="ch-row" data-id="2069"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#18</span>
+                    <span class="ch-title">Chapter 18 - Another Woman (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2068.html" class="ch-row" data-id="2068"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#19</span>
+                    <span class="ch-title">Chapter 19 - Want Me (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2067.html" class="ch-row" data-id="2067"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#20</span>
+                    <span class="ch-title">Chapter 20 - Want Me (2) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2066.html" class="ch-row" data-id="2066"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#21</span>
+                    <span class="ch-title">Chapter 21 - Thoroughly Debauched (1) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2065.html" class="ch-row" data-id="2065"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#22</span>
+                    <span class="ch-title">Chapter 22 - Thoroughly Debauched (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2064.html" class="ch-row" data-id="2064"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#23</span>
+                    <span class="ch-title">Chapter 23 - The Besotted King (1) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2063.html" class="ch-row" data-id="2063"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#24</span>
+                    <span class="ch-title">Chapter 24 - The Besotted King (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2062.html" class="ch-row" data-id="2062"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#25</span>
+                    <span class="ch-title">Chapter 25 - A Surprise Visit</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2061.html" class="ch-row" data-id="2061"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#26</span>
+                    <span class="ch-title">Chapter 26 - A Soft Warning (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2060.html" class="ch-row" data-id="2060"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#27</span>
+                    <span class="ch-title">Chapter 27 - A Soft Warning (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2059.html" class="ch-row" data-id="2059"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#28</span>
+                    <span class="ch-title">Chapter 28 - The Fear of Losing Someone (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2058.html" class="ch-row" data-id="2058"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#29</span>
+                    <span class="ch-title">Chapter 29 - The Fear of Losing Someone (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2057.html" class="ch-row" data-id="2057"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#30</span>
+                    <span class="ch-title">Chapter 30 - What Are You?</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2056.html" class="ch-row" data-id="2056"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#31</span>
+                    <span class="ch-title">Chapter 31 - The Devoted Follower</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2055.html" class="ch-row" data-id="2055"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#32</span>
+                    <span class="ch-title">Chapter 32 - A Sin Committed (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2054.html" class="ch-row" data-id="2054"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#33</span>
+                    <span class="ch-title">Chapter 33 - A Sin Committed (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2053.html" class="ch-row" data-id="2053"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#34</span>
+                    <span class="ch-title">Chapter 34 - Fever of Desire (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2052.html" class="ch-row" data-id="2052"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#35</span>
+                    <span class="ch-title">Chapter 35 - Fever of Desire (2) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2051.html" class="ch-row" data-id="2051"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#36</span>
+                    <span class="ch-title">Chapter 36 - The Punishment for The Sinner (1) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2050.html" class="ch-row" data-id="2050"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#37</span>
+                    <span class="ch-title">Chapter 37 - The Punishment for The Sinner (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2049.html" class="ch-row" data-id="2049"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#38</span>
+                    <span class="ch-title">Chapter 38 - Forever and Ever</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2048.html" class="ch-row" data-id="2048"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#39</span>
+                    <span class="ch-title">Chapter 39 - Killing Death</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2047.html" class="ch-row" data-id="2047"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#40</span>
+                    <span class="ch-title">Chapter 40 - A Trickster’s Words</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2046.html" class="ch-row" data-id="2046"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#41</span>
+                    <span class="ch-title">Chapter 41 - Because of Love</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2045.html" class="ch-row" data-id="2045"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#42</span>
+                    <span class="ch-title">Chapter 42 - Revelation (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2044.html" class="ch-row" data-id="2044"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#43</span>
+                    <span class="ch-title">Chapter 43 - Revelation (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2043.html" class="ch-row" data-id="2043"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#44</span>
+                    <span class="ch-title">Chapter 44 - Strange Behavior</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2042.html" class="ch-row" data-id="2042"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#45</span>
+                    <span class="ch-title">Chapter 45 - A Trail of Narcissuses (1)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2041.html" class="ch-row" data-id="2041"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#46</span>
+                    <span class="ch-title">Chapter 46 - A Trail of Narcissuses (2) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2040.html" class="ch-row" data-id="2040"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#47</span>
+                    <span class="ch-title">Chapter 47 - Deceived</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2039.html" class="ch-row" data-id="2039"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#48</span>
+                    <span class="ch-title">Chapter 48 - The Cave by the Cliff (1) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2038.html" class="ch-row" data-id="2038"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#49</span>
+                    <span class="ch-title">Chapter 49 - The Cave by the Cliff (2)</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2037.html" class="ch-row" data-id="2037"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#50</span>
+                    <span class="ch-title">Chapter 50 - This Is My Fate</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2036.html" class="ch-row" data-id="2036"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#51</span>
+                    <span class="ch-title">Chapter 51 - Sisyphos’ confession</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2035.html" class="ch-row" data-id="2035"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#52</span>
+                    <span class="ch-title">Chapter 52 - The Queen of the Underworld’s Plan</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2034.html" class="ch-row" data-id="2034"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#53</span>
+                    <span class="ch-title">Chapter 53 - After Story (1) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2033.html" class="ch-row" data-id="2033"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#54</span>
+                    <span class="ch-title">Chapter 54 - After Story (2) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2032.html" class="ch-row" data-id="2032"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#55</span>
+                    <span class="ch-title">Chapter 55 - After Story (3) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2031.html" class="ch-row" data-id="2031"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#56</span>
+                    <span class="ch-title">Chapter 56 - After Story (4) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2030.html" class="ch-row" data-id="2030"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#57</span>
+                    <span class="ch-title">Chapter 57 - After Story (5) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+            <a href="/novel/for-persephone/chapter/2029.html" class="ch-row" data-id="2029"
+                data-series="11">
+                <div class="ch-row-left">
+                    <span class="ch-num">#58</span>
+                    <span class="ch-title">Chapter 58 - After Story (6) | 19</span>
+                </div>
+                <div class="ch-row-right">
+                    <span class="ch-read-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
+                            fill="currentColor">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg>
+                    </span>
+                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
+                        width="18" fill="currentColor">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                    </svg>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+
+        
+        const chaptersSection = document.getElementById('chapters');
+        if (!chaptersSection) return;
+        const seriesId = parseInt(chaptersSection.getAttribute('data-series-id'));
+        const progress = JSON.parse(localStorage.getItem('reading_progress') || '{}');
+        const readChapters = progress[seriesId] || [];
+
+        document.querySelectorAll('.ch-row').forEach(item => {
+            const chapterId = parseInt(item.getAttribute('data-id'));
+            if (readChapters.includes(chapterId)) {
+                item.classList.add('read');
+            }
+        });
+
+        
+        if (readChapters.length > 0) {
+            const btn = document.getElementById('start-reading-btn');
+            if (btn) {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z"/></svg> Continue Reading';
+            }
+        }
+    });
+</script>
+
+        </main>
+
+        
+        <nav class="bottom-bar">
+            <a href="/" class="tab-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="/library" class="tab-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                </svg>
+                <span>Library</span>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>
