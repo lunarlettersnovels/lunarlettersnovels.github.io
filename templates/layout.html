@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>{{block "title" .}}Lunar Letters{{end}}</title>
+    <meta name="description" content="{{block " description" .}}Read novels online at Lunar Letters{{end}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/main.js" defer></script>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="app-shell">
+        <!-- App Header -->
+        <header class="app-header" id="app-header">
+            <div class="app-header-inner">
+                <a href="/" class="app-logo">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                            fill="currentColor" />
+                    </svg>
+                    <span>Lunar Letters</span>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="/library" class="nav-link">Library</a>
+                </nav>
+                <div class="app-header-actions">
+                    <button id="theme-toggle" class="app-icon-btn" aria-label="Toggle theme">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l56-56 113 113-55 54Zm-94 292v-80h160v80H160Zm114 268 54-55 115 112-57 57-112-114ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z" />
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" height="22"
+                            viewBox="0 -960 960 960" width="22" fill="currentColor">
+                            <path
+                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-content">
+            {{template "content" .}}
+        </main>
+
+        <!-- Bottom Tab Bar (Homepage only via CSS) -->
+        <nav class="bottom-bar">
+            <a href="/" class="tab-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="/library" class="tab-item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                    fill="currentColor">
+                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                </svg>
+                <span>Library</span>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>
