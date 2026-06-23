@@ -17,6 +17,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/main.css">
     <script src="/assets/main.js" defer></script>
+    <style>
+        .responsive-banner-ad{text-align:center;margin:16px 0}
+    </style>
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
@@ -91,6 +94,26 @@
             {{safeHTML (stripImages .Chapter.Content.String)}}
             {{end}}
         </div>
+
+        <div class="responsive-banner-ad" id="responsive-banner-ad"></div>
+        <script>
+            (function() {
+                var isMobile = window.innerWidth < 768;
+                var key = isMobile ? 'e34f7d415ae91981a65a311c69b510a6' : '515f1a24aaf496e387679c9bd9507ad2';
+                var w = isMobile ? 320 : 728;
+                var h = isMobile ? 50 : 90;
+                window.atOptions = {
+                    'key': key,
+                    'format': 'iframe',
+                    'height': h,
+                    'width': w,
+                    'params': {}
+                };
+                var s = document.createElement('script');
+                s.src = 'https://www.highperformanceformat.com/' + key + '/invoke.js';
+                document.getElementById('responsive-banner-ad').appendChild(s);
+            })();
+        </script>
 
         <!-- Chapter End Card -->
         <div class="chapter-end-card">
