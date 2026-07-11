@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lunar Letters</title>
+    <meta name="description" content="Get in touch with the Lunar Letters team.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #ff6b35;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f2f2f7;
+            color: #1c1c1e;
+        }
+
+        .page-wrap {
+            max-width: 760px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            color: #e85a25;
+        }
+
+        .page-title {
+            font-weight: 800;
+            letter-spacing: -.5px;
+        }
+
+        .content-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 2px 8px rgba(0, 0, 0, .04);
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, .35);
+        }
+
+        .email-btn:hover {
+            color: #fff;
+            opacity: .92;
+        }
+
+        a.accent {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container page-wrap py-4 py-md-5">
+        <a href="/" class="back-btn mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
+                <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+            </svg>
+            Back to Home
+        </a>
+
+        <h1 class="page-title mb-4">Contact Us</h1>
+
+        <div class="content-card p-4 p-md-5">
+            <p class="lead">We'd love to hear from you.</p>
+
+            <p>Whether you have a question, feedback, a suggestion for a title you'd like to see, or a report about
+                something that isn't working right, our inbox is always open. We do our best to reply to every message.</p>
+
+            <p class="mb-4">The best way to reach us is by email:</p>
+
+            <a href="mailto:deathnotehub@gmail.com" class="email-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
+                    <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z" />
+                </svg>
+                deathnotehub@gmail.com
+            </a>
+
+            <p class="mt-4 mb-0 text-secondary">You can also learn more <a href="/about.html" class="accent">about us</a>
+                or review our <a href="/privacy.html" class="accent">Privacy Policy</a>.</p>
+        </div>
+    </div>
+</body>
+
+</html>
