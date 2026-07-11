@@ -2,155 +2,106 @@
 {{define "description"}}Read {{.Series.Title}} by {{.Series.Author.String}} on Lunar Letters.{{end}}
 
 {{define "content"}}
-<!-- Full-bleed Cover Banner -->
-{{if .Series.ThumbnailURL.Valid}}
-<div class="series-banner" style="background-image: url('{{.Series.ThumbnailURL.String}}')">
-    <div class="series-banner-overlay"></div>
-    <div class="series-banner-content"></div>
-</div>
-{{else}}
-<div class="series-banner" style="background: {{grad .Series.ID}}">
-    <div class="series-banner-overlay"></div>
-    <div class="series-banner-content">
+<div class="container py-4" style="max-width: 860px;">
+    <!-- Banner -->
+    {{if .Series.ThumbnailURL.Valid}}
+    <div class="series-banner mb-3" style="background-image: url('{{.Series.ThumbnailURL.String}}')"></div>
+    {{else}}
+    <div class="series-banner mb-3" style="background: {{grad .Series.ID}}">
         <span class="series-banner-abbr">{{abbr .Series.Title}}</span>
-    </div>
-</div>
-{{end}}
-
-<!-- Floating Info Card -->
-<div class="series-info-card">
-    <h1 class="series-title">{{.Series.Title}}</h1>
-    <p class="series-author">
-        {{if .Series.Author.Valid}}{{.Series.Author.String}}{{else}}Unknown Author{{end}}
-    </p>
-
-    {{if .Series.Genre.Valid}}
-    <div class="series-tags">
-        {{range split .Series.Genre.String ","}}
-        <span class="tag">{{.}}</span>
-        {{end}}
     </div>
     {{end}}
 
-    <div class="series-stats">
-        <div class="stat">
-            <span class="stat-value">{{len .Chapters}}</span>
-            <span class="stat-label">Chapters</span>
-        </div>
-        {{if .Series.Status.Valid}}
-        <div class="stat">
-            <span class="stat-value status-dot status-{{.Series.Status.String}}">{{.Series.Status.String}}</span>
-            <span class="stat-label">Status</span>
-        </div>
+    <!-- Header row -->
+    <div class="d-flex gap-3 gap-md-4 mb-4">
+        {{if .Series.ThumbnailURL.Valid}}
+        <img src="{{.Series.ThumbnailURL.String}}" alt="{{.Series.Title}}" class="series-cover flex-shrink-0 d-none d-sm-block">
         {{end}}
-        {{if .Series.ReleaseYear.Valid}}
-        <div class="stat">
-            <span class="stat-value">{{.Series.ReleaseYear.Int32}}</span>
-            <span class="stat-label">Year</span>
-        </div>
-        {{end}}
-    </div>
-
-    <!-- Actions -->
-    <div class="series-actions">
-        <a href="#chapters" class="cta-btn" id="start-reading-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
-                <path
-                    d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z" />
-            </svg>
-            Start Reading
-        </a>
-        <button id="bookmark-btn" class="cta-btn secondary" data-slug="{{.Series.Slug}}" data-title="{{.Series.Title}}"
-            data-author="{{if .Series.Author.Valid}}{{.Series.Author.String}}{{else}}Unknown{{end}}"
-            data-cover="{{if .Series.ThumbnailURL.Valid}}{{.Series.ThumbnailURL.String}}{{else}}{{end}}">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                <path
-                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
-            </svg>
-        </button>
-    </div>
-</div>
-
-<!-- Tabs: About / Chapters -->
-<div class="series-tabs">
-    <button class="series-tab active" data-tab="about">About</button>
-    <button class="series-tab" data-tab="chapters">Chapters</button>
-</div>
-
-<!-- About Panel -->
-<div class="tab-panel active" id="panel-about">
-    <div class="synopsis-section">
-        <h3 class="section-label">Synopsis</h3>
-        <div class="synopsis-text">
-            {{if .Series.Description.Valid}}
-            {{safeHTML .Series.Description.String}}
-            {{else}}
-            <p>No description available for this novel.</p>
+        <div class="flex-grow-1">
+            <h1 class="fw-bold mb-1">{{.Series.Title}}</h1>
+            <p class="text-secondary mb-2">
+                <i class="bi bi-person me-1"></i>{{if .Series.Author.Valid}}{{.Series.Author.String}}{{else}}Unknown Author{{end}}
+            </p>
+            {{if .Series.Genre.Valid}}
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                {{range split .Series.Genre.String ","}}
+                <span class="badge rounded-pill text-bg-light border">{{.}}</span>
+                {{end}}
+            </div>
             {{end}}
+            <div class="d-flex flex-wrap gap-4 mb-3 small">
+                <div><span class="fw-bold fs-6">{{len .Chapters}}</span> <span class="text-secondary">Chapters</span></div>
+                {{if .Series.Status.Valid}}
+                <div><span class="fw-bold fs-6 text-capitalize">{{.Series.Status.String}}</span> <span class="text-secondary">Status</span></div>
+                {{end}}
+                {{if .Series.ReleaseYear.Valid}}
+                <div><span class="fw-bold fs-6">{{.Series.ReleaseYear.Int32}}</span> <span class="text-secondary">Year</span></div>
+                {{end}}
+            </div>
+            <div class="d-flex gap-2">
+                <a href="#chapters-tab" class="btn btn-primary" id="start-reading-btn"
+                    data-bs-toggle="tab" data-bs-target="#panel-chapters" role="tab">
+                    <i class="bi bi-book-half me-2"></i>Start Reading
+                </a>
+                <button id="bookmark-btn" class="btn btn-outline-secondary" data-slug="{{.Series.Slug}}"
+                    data-title="{{.Series.Title}}"
+                    data-author="{{if .Series.Author.Valid}}{{.Series.Author.String}}{{else}}Unknown{{end}}"
+                    data-cover="{{if .Series.ThumbnailURL.Valid}}{{.Series.ThumbnailURL.String}}{{end}}"
+                    aria-label="Bookmark">
+                    <i class="bi bi-bookmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#panel-about" type="button"
+                role="tab">About</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="chapters-tab" data-bs-toggle="tab" data-bs-target="#panel-chapters"
+                type="button" role="tab">Chapters</button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- About -->
+        <div class="tab-pane fade show active" id="panel-about" role="tabpanel">
+            <h2 class="h6 text-uppercase text-secondary mb-3">Synopsis</h2>
+            <div class="lh-lg">
+                {{if .Series.Description.Valid}}
+                {{safeHTML .Series.Description.String}}
+                {{else}}
+                <p>No description available for this novel.</p>
+                {{end}}
+            </div>
+        </div>
+
+        <!-- Chapters -->
+        <div class="tab-pane fade" id="panel-chapters" role="tabpanel">
+            <div id="chapters" data-series-id="{{.Series.ID}}">
+                <p class="text-secondary small mb-2">{{len .Chapters}} chapters</p>
+                <div class="list-group">
+                    {{$slug := .Series.Slug}}
+                    {{range .Chapters}}
+                    <a href="/novel/{{$slug}}/chapter/{{.ID}}.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="{{.ID}}">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#{{.ChapterNumber}}</span>
+                            <span class="ch-title text-truncate">{{if .Title.Valid}}{{.Title.String}}{{else}}Chapter {{.ChapterNumber}}{{end}}</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    {{end}}
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- Chapters Panel -->
-<div class="tab-panel" id="panel-chapters">
-    <div class="chapters-section" id="chapters" data-series-id="{{.Series.ID}}">
-        <div class="chapters-header">
-            <span class="chapters-count">{{len .Chapters}} chapters</span>
-        </div>
-        <div class="chapters-list">
-            {{$slug := .Series.Slug}}
-            {{$seriesId := .Series.ID}}
-            {{range .Chapters}}
-            <a href="/novel/{{$slug}}/chapter/{{.ID}}.html" class="ch-row" data-id="{{.ID}}"
-                data-series="{{$seriesId}}">
-                <div class="ch-row-left">
-                    <span class="ch-num">#{{.ChapterNumber}}</span>
-                    <span class="ch-title">{{if .Title.Valid}}{{.Title.String}}{{else}}Chapter
-                        {{.ChapterNumber}}{{end}}</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            {{end}}
-        </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Tab switching is handled by main.js
-
-        // Mark read chapters
-        const chaptersSection = document.getElementById('chapters');
-        if (!chaptersSection) return;
-        const seriesId = parseInt(chaptersSection.getAttribute('data-series-id'));
-        const progress = JSON.parse(localStorage.getItem('reading_progress') || '{}');
-        const readChapters = progress[seriesId] || [];
-
-        document.querySelectorAll('.ch-row').forEach(item => {
-            const chapterId = parseInt(item.getAttribute('data-id'));
-            if (readChapters.includes(chapterId)) {
-                item.classList.add('read');
-            }
-        });
-
-        // Update CTA button
-        if (readChapters.length > 0) {
-            const btn = document.getElementById('start-reading-btn');
-            if (btn) {
-                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z"/></svg> Continue Reading';
-            }
-        }
-    });
-</script>
 {{end}}

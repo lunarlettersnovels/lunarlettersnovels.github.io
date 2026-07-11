@@ -1,0 +1,23 @@
+{
+  "name": "lunar-letters-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UI build pipeline (rspack) for Lunar Letters — custom orangered Bootstrap.",
+  "scripts": {
+    "build": "rspack build",
+    "watch": "rspack build --watch",
+    "dev": "rspack build --watch"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.1.8",
+    "@rspack/core": "^1.1.8",
+    "css-loader": "^7.1.2",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7945621150033029"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt=""
             referrerpolicy="no-referrer-when-downgrade" /></noscript>
@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>For A Princess - Lunar Letters</title>
     <meta name="description" content="Read novels online at Lunar Letters">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,127 +20,118 @@
     <script src="/assets/main.js" defer></script>
     <script>
         (function () {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
+            const saved = localStorage.getItem('theme');
+            const dark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
         })();
     </script>
 </head>
 
-<body>
-    <div class="app-shell">
-        
-        <header class="app-header" id="app-header">
-            <div class="app-header-inner">
-                <a href="/" class="app-logo">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                            fill="currentColor" />
-                    </svg>
-                    <span>Lunar Letters</span>
-                </a>
-                <nav class="desktop-nav">
-                    <a href="/" class="nav-link active">Home</a>
-                    <a href="/library" class="nav-link">Library</a>
-                </nav>
-                <div class="app-header-actions">
-                    <button id="theme-toggle" class="app-icon-btn" aria-label="Toggle theme">
-                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" height="22"
-                            viewBox="0 -960 960 960" width="22" fill="currentColor">
-                            <path
-                                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l56-56 113 113-55 54Zm-94 292v-80h160v80H160Zm114 268 54-55 115 112-57 57-112-114ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z" />
-                        </svg>
-                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" height="22"
-                            viewBox="0 -960 960 960" width="22" fill="currentColor">
-                            <path
-                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
-                        </svg>
-                    </button>
-                </div>
+<body class="d-flex flex-column min-vh-100">
+    
+    <nav class="navbar navbar-expand-md sticky-top ll-navbar">
+        <div class="container">
+            <a class="navbar-brand ll-brand" href="/">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                        fill="currentColor" />
+                </svg>
+                <span>Lunar Letters</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-md-center gap-md-1">
+                    <li class="nav-item"><a class="nav-link ll-nav-link" href="/"><i
+                                class="bi bi-house-door me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link ll-nav-link" href="/library"><i
+                                class="bi bi-book me-1"></i>My Library</a></li>
+                    <li class="nav-item ms-md-2">
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle theme-toggle"
+                            data-theme-toggle type="button" aria-label="Toggle theme"
+                            style="width:38px;height:38px;">
+                            <i class="bi bi-moon-stars-fill"></i>
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </nav>
 
+    
+    <main class="flex-grow-1">
         
-        <main class="app-content">
+<div class="container py-4" style="max-width: 860px;">
+    
+    
+    <div class="series-banner mb-3" style="background-image: url('https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg')"></div>
+    
+
+    
+    <div class="d-flex gap-3 gap-md-4 mb-4">
+        
+        <img src="https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg" alt="For A Princess" class="series-cover flex-shrink-0 d-none d-sm-block">
+        
+        <div class="flex-grow-1">
+            <h1 class="fw-bold mb-1">For A Princess</h1>
+            <p class="text-secondary mb-2">
+                <i class="bi bi-person me-1"></i>Sasogeum Jo
+            </p>
             
-
-
-<div class="series-banner" style="background-image: url('https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg')">
-    <div class="series-banner-overlay"></div>
-    <div class="series-banner-content"></div>
-</div>
-
-
-
-<div class="series-info-card">
-    <h1 class="series-title">For A Princess</h1>
-    <p class="series-author">
-        Sasogeum Jo
-    </p>
-
-    
-    <div class="series-tags">
-        
-        <span class="tag">Fantasy Romance</span>
-        
-    </div>
-    
-
-    <div class="series-stats">
-        <div class="stat">
-            <span class="stat-value">10</span>
-            <span class="stat-label">Chapters</span>
-        </div>
-        
-        <div class="stat">
-            <span class="stat-value status-dot status-publishing">publishing</span>
-            <span class="stat-label">Status</span>
-        </div>
-        
-        
-        <div class="stat">
-            <span class="stat-value">2025</span>
-            <span class="stat-label">Year</span>
-        </div>
-        
-    </div>
-
-    
-    <div class="series-actions">
-        <a href="#chapters" class="cta-btn" id="start-reading-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor">
-                <path
-                    d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z" />
-            </svg>
-            Start Reading
-        </a>
-        <button id="bookmark-btn" class="cta-btn secondary" data-slug="for-a-princess" data-title="For A Princess"
-            data-author="Sasogeum Jo"
-            data-cover="https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                <path
-                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
-            </svg>
-        </button>
-    </div>
-</div>
-
-
-<div class="series-tabs">
-    <button class="series-tab active" data-tab="about">About</button>
-    <button class="series-tab" data-tab="chapters">Chapters</button>
-</div>
-
-
-<div class="tab-panel active" id="panel-about">
-    <div class="synopsis-section">
-        <h3 class="section-label">Synopsis</h3>
-        <div class="synopsis-text">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                
+                <span class="badge rounded-pill text-bg-light border">Fantasy Romance</span>
+                
+            </div>
             
-            <p>The greatest nation on the continent was the Kingdom of Terrosa.</p>
+            <div class="d-flex flex-wrap gap-4 mb-3 small">
+                <div><span class="fw-bold fs-6">10</span> <span class="text-secondary">Chapters</span></div>
+                
+                <div><span class="fw-bold fs-6 text-capitalize">publishing</span> <span class="text-secondary">Status</span></div>
+                
+                
+                <div><span class="fw-bold fs-6">2025</span> <span class="text-secondary">Year</span></div>
+                
+            </div>
+            <div class="d-flex gap-2">
+                <a href="#chapters-tab" class="btn btn-primary" id="start-reading-btn"
+                    data-bs-toggle="tab" data-bs-target="#panel-chapters" role="tab">
+                    <i class="bi bi-book-half me-2"></i>Start Reading
+                </a>
+                <button id="bookmark-btn" class="btn btn-outline-secondary" data-slug="for-a-princess"
+                    data-title="For A Princess"
+                    data-author="Sasogeum Jo"
+                    data-cover="https://assets.lunarletters.fun/thumbnails/For-A-Princess.jpg"
+                    aria-label="Bookmark">
+                    <i class="bi bi-bookmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <ul class="nav nav-tabs mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#panel-about" type="button"
+                role="tab">About</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="chapters-tab" data-bs-toggle="tab" data-bs-target="#panel-chapters"
+                type="button" role="tab">Chapters</button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        
+        <div class="tab-pane fade show active" id="panel-about" role="tabpanel">
+            <h2 class="h6 text-uppercase text-secondary mb-3">Synopsis</h2>
+            <div class="lh-lg">
+                
+                <p>The greatest nation on the continent was the Kingdom of Terrosa.</p>
 <p>Souls were the beings that were discriminated against the regular folk of the kingdom.</p>
 <p>Lesaric, who was the strongest Soul, fulfilled his responsibility as the chief commander and led the final battle to victory. He was then sentenced to death by the king.</p>
 <p>He would have welcomed death if he had not been saved by the fourth princess, the most powerless member of the royal family.</p>
@@ -151,274 +141,168 @@
 <p>“Use me,” he had told her. “I’m pretty useful when you need me to be.”</p>
 <p>Delmore had smiled.</p>
 <p>And there they were, the princess who longed for something greater and the knight that would let it all go for her. The two of them, together.</p>
-            
+                
+            </div>
+        </div>
+
+        
+        <div class="tab-pane fade" id="panel-chapters" role="tabpanel">
+            <div id="chapters" data-series-id="25">
+                <p class="text-secondary small mb-2">10 chapters</p>
+                <div class="list-group">
+                    
+                    
+                    <a href="/novel/for-a-princess/chapter/4358.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4358">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#0</span>
+                            <span class="ch-title text-truncate">Synopsis &amp; Prologue</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4367.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4367">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#1.1</span>
+                            <span class="ch-title text-truncate">Chapter 1.1</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4366.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4366">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#1.2</span>
+                            <span class="ch-title text-truncate">Chapter 1.2</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4365.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4365">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#2</span>
+                            <span class="ch-title text-truncate">Chapter 2</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4364.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4364">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#3.1</span>
+                            <span class="ch-title text-truncate">Chapter 3</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4363.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4363">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#4</span>
+                            <span class="ch-title text-truncate">Chapter 4</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4362.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4362">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#5</span>
+                            <span class="ch-title text-truncate">Chapter 5</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4361.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4361">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#6.1</span>
+                            <span class="ch-title text-truncate">Chapter 6.1</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4360.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4360">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#6.2</span>
+                            <span class="ch-title text-truncate">Chapter 6.2</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="/novel/for-a-princess/chapter/4359.html"
+                        class="list-group-item list-group-item-action chapter-item d-flex align-items-center justify-content-between"
+                        data-id="4359">
+                        <span class="d-flex align-items-center gap-3" style="min-width:0;">
+                            <span class="text-orangered fw-bold small flex-shrink-0">#7.1</span>
+                            <span class="ch-title text-truncate">Chapter 7.1</span>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 flex-shrink-0">
+                            <i class="bi bi-check-circle-fill text-success ch-read-badge d-none"></i>
+                            <i class="bi bi-chevron-right text-secondary"></i>
+                        </span>
+                    </a>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+    </main>
 
-<div class="tab-panel" id="panel-chapters">
-    <div class="chapters-section" id="chapters" data-series-id="25">
-        <div class="chapters-header">
-            <span class="chapters-count">10 chapters</span>
+    
+    <footer class="site-footer mt-5 py-4">
+        <div class="container text-center">
+            <nav class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact Us</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/cookies.html">Cookie Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </nav>
+            <p class="text-secondary small mb-0">&copy; Lunar Letters. All rights reserved.</p>
         </div>
-        <div class="chapters-list">
-            
-            
-            
-            <a href="/novel/for-a-princess/chapter/4358.html" class="ch-row" data-id="4358"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#0</span>
-                    <span class="ch-title">Synopsis &amp; Prologue</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4367.html" class="ch-row" data-id="4367"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#1.1</span>
-                    <span class="ch-title">Chapter 1.1</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4366.html" class="ch-row" data-id="4366"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#1.2</span>
-                    <span class="ch-title">Chapter 1.2</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4365.html" class="ch-row" data-id="4365"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#2</span>
-                    <span class="ch-title">Chapter 2</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4364.html" class="ch-row" data-id="4364"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#3.1</span>
-                    <span class="ch-title">Chapter 3</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4363.html" class="ch-row" data-id="4363"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#4</span>
-                    <span class="ch-title">Chapter 4</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4362.html" class="ch-row" data-id="4362"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#5</span>
-                    <span class="ch-title">Chapter 5</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4361.html" class="ch-row" data-id="4361"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#6.1</span>
-                    <span class="ch-title">Chapter 6.1</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4360.html" class="ch-row" data-id="4360"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#6.2</span>
-                    <span class="ch-title">Chapter 6.2</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-            <a href="/novel/for-a-princess/chapter/4359.html" class="ch-row" data-id="4359"
-                data-series="25">
-                <div class="ch-row-left">
-                    <span class="ch-num">#7.1</span>
-                    <span class="ch-title">Chapter 7.1</span>
-                </div>
-                <div class="ch-row-right">
-                    <span class="ch-read-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"
-                            fill="currentColor">
-                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
-                        </svg>
-                    </span>
-                    <svg class="ch-chevron" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
-                        width="18" fill="currentColor">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </div>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        
-
-        
-        const chaptersSection = document.getElementById('chapters');
-        if (!chaptersSection) return;
-        const seriesId = parseInt(chaptersSection.getAttribute('data-series-id'));
-        const progress = JSON.parse(localStorage.getItem('reading_progress') || '{}');
-        const readChapters = progress[seriesId] || [];
-
-        document.querySelectorAll('.ch-row').forEach(item => {
-            const chapterId = parseInt(item.getAttribute('data-id'));
-            if (readChapters.includes(chapterId)) {
-                item.classList.add('read');
-            }
-        });
-
-        
-        if (readChapters.length > 0) {
-            const btn = document.getElementById('start-reading-btn');
-            if (btn) {
-                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-60v280l-100-60-100 60v-280H240v640Z"/></svg> Continue Reading';
-            }
-        }
-    });
-</script>
-
-        </main>
-
-        
-        <nav class="bottom-bar">
-            <a href="/" class="tab-item active">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
-                    fill="currentColor">
-                    <path
-                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z" />
-                </svg>
-                <span>Home</span>
-            </a>
-            <a href="/library" class="tab-item">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
-                    fill="currentColor">
-                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
-                </svg>
-                <span>Library</span>
-            </a>
-        </nav>
-    </div>
+    </footer>
 </body>
 
 </html>

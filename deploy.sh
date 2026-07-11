@@ -3,14 +3,23 @@ set -e
 
 echo "🚀 Starting Local Build & Deploy..."
 
-# 1. Build the Site
+# 1. Build front-end assets (orangered Bootstrap via rspack) -> public/assets
+echo "🎨 Building UI assets..."
+npm run build
+
+# 2. Build the Site (copies public/ -> docs/, renders templates)
 ./app.exe build
 
-# 2. Copy static pages into the output folder
+# 3. Ensure compiled assets (CSS/JS + Bootstrap Icons fonts) are in docs
+echo "📦 Syncing assets..."
+mkdir -p ./docs/assets
+cp -r ./public/assets/. ./docs/assets/
+
+# 4. Copy static pages into the output folder
 echo "📄 Copying static pages..."
 cp ./pages/*.html ./docs/
 
-# 3. Push to GitHub
+# 5. Push to GitHub
 echo "📂 Committing and Pushing..."
 git add docs/
 git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M')"
