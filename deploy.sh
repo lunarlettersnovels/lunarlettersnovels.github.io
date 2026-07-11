@@ -19,7 +19,10 @@ cp -r ./public/assets/. ./docs/assets/
 echo "📄 Copying static pages..."
 cp ./pages/*.html ./docs/
 
-# 5. Push to GitHub
+# 5. Localise images: copy public/img -> docs/img and rewrite novelupdates CDN URLs
+bash ./rewrite-images.sh
+
+# 6. Push to GitHub
 echo "📂 Committing and Pushing..."
 git add docs/
 git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M')"
